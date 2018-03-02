@@ -1,23 +1,30 @@
 #!/bin/bash
 set -e
 ##################################################################################################################
-# Author 	: 	Abz Hussain
-# Email		:	abzhussain@hotmail.com
+# Author 	: 	Erik Dubois
+# Website 	: 	https://www.erikdubois.be
+# Website	:	https://www.archmerge.info
+# Website	:	https://www.archmerge.com
+# Website	:	https://www.archmerged.com
+# Website	:	https://www.archmergeforum.com
 ##################################################################################################################
 #
 #   DO NOT JUST RUN THIS. EXAMINE AND JUDGE. RUN AT YOUR OWN RISK.
 #
 ##################################################################################################################
-sudo pacman -Syu --noconfirm --needed
-#sudo pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings --noconfirm --needed
-#sudo systemctl enable lightdm.service -f
+echo "#################################################"
+echo "If it feels like the downloads are too slow"
+echo "Stop the installation with CTRL + C"
+echo "and run the alias - mirror in the terminal"
+echo "#################################################"
 
-#Install gnome and the GDM window manager
-sudo pacman -S gdm --noconfirm --needed
+sudo pacman -Sy --noconfirm --needed
+sudo pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings --noconfirm --needed
+#sudo pacman -S gdm
 sudo pacman -S gnome --noconfirm --needed
-sudo systemctl enable gdm.service -f
 #sudo pacman -S gnome-extra --noconfirm --needed
-# set the computer to boot default to graphical
+#sudo systemctl enable gdm.service -f
+sudo systemctl enable lightdm.service -f
 sudo systemctl set-default graphical.target
 
 
