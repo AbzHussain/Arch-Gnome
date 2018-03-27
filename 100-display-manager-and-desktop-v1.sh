@@ -12,18 +12,28 @@ sudo pacman -Syu --noconfirm --needed
 #sudo pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings --noconfirm --needed
 #sudo systemctl enable lightdm.service -f
 
-#Install gnome and the GDM window manager
+#Install the GDM window manager
 sudo pacman -S gdm --noconfirm --needed
-sudo pacman -S gnome --noconfirm --needed
+
+# enable GDM
 sudo systemctl enable gdm.service -f
+
+#install Cinnamon or Gnome
+
+#Gnome
+#sudo pacman -S gnome --noconfirm --needed
+
+#cinnamon
+sudo pacman -S cinnamon --noconfirm --needed
+
+#we have the ability to install gnome-extra but we dont want to install everything from gnome-extra
 #sudo pacman -S gnome-extra --noconfirm --needed
+
 # set the computer to boot default to graphical
 sudo systemctl set-default graphical.target
 
 
 echo "Remove anything you do not like from the installed applications"
-
-sudo pacman -R gnome-backgrounds --noconfirm
 
 echo "Install only certain applications from gnome-extra "
 

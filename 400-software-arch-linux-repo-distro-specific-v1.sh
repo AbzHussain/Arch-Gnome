@@ -46,7 +46,7 @@ echo "Installing category Other"
 
 echo "Installing category System"
 
-sudo pacman -S --noconfirm --needed nautilus-image-converter
+#sudo pacman -S --noconfirm --needed nautilus-image-converter
 sudo pacman -S --noconfirm --needed dmenu
 #variety
 sudo pacman -S --noconfirm --needed libappindicator-gtk3
